@@ -23,6 +23,7 @@
  Este projeto trata-se de um crud em PHP, onde os dados coletados são tratados e armazenados no banco MySQL.
 </p>
 <p>
-  O projeto esta hospedado na plataforma infinityfree, onde foi possivel realizer o deploy para torná-lo  disponível.
+  O projeto esta hospedado na plataforma infinityfree, onde foi possivel realizer o deploy para torná-lo  disponível em:.
 </p>
+<a target="_blank" href="http://sistemacadastro.kesug.com/usuarios.php">Sistema Cadastro</a>
 
