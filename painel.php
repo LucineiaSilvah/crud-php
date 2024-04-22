@@ -29,9 +29,9 @@ include('valida_acesso.php');
         <label for="senha">Senha</label>
         <input type="text" name="senha" placeholder="digite sua senha" required>
         <label for="nascimento">Data Nascimento</label>
-        <input type="text" name="nascimento" placeholder="AAAA-MM-DD" required>
+        <input type="date" name="nascimento" placeholder="DD-MM-AAAA" required>
         <label for="cidade">Cidade</label>
-        <input type="text" name="cidade" placeholder="digite seu estado" required>
+        <input type="text" name="cidade" placeholder="digite sua" required>
         <label for="estado">Estado</label>
         <input type="text" name="estado" placeholder="Ex: PR, PE" required maxlength="2" >
         <label for="cep">CEP</label>
@@ -43,7 +43,9 @@ include('valida_acesso.php');
       <a class="btn" href="usuarios.php" >Visualizar</a>
       </div>
     </main>
-
+     <footer  class="rodape">
+      <p>Desenvolvido por : </p><a target="_blank" href="https://www.linkedin.com/in/lucineia-r-silva-frontend/"> Lucineia Silva ^.^ 2024</a>
+      </footer>
   </div>
 </body>
 </html>

@@ -70,7 +70,9 @@
       <a class="btn" href="usuarios.php" >Visualizar</a>
       </div>
     </main>
-
+    <footer  class="rodape">
+      <p>Desenvolvido por : </p><a target="_blank" href="https://www.linkedin.com/in/lucineia-r-silva-frontend/"> Lucineia Silva ^.^ 2024</a>
+      </footer>
   </div>
 </body>
 </html>

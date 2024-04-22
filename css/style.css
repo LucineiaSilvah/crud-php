@@ -2,11 +2,12 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #3377b4;
+  background: #3377 url("https://images.unsplash.com/photo-1468971050039-be99497410af?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+  no-repeat center / cover;;
   color: #ebeff8;
 }
 
-.cabecalho {
+.cabecalho{
   display: flex;
   align-items: center;
   width: 100%;
@@ -33,8 +34,7 @@ h2{
 }
 
 .principal {
-  background: url("https://images.unsplash.com/photo-1468971050039-be99497410af?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    no-repeat center / cover;
+ 
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -69,18 +69,18 @@ h2{
   margin-top: 10px;
 }
 .btn {
+  font-size: 24px;
   padding: 10px;
   width: 150px;
   border-radius: 5px;
   background: #3377b4;
   color: #ebeff8;
-  font-size: 18px;
   font-weight: bold;
-  margin-top: 10px;
+  margin: 20px 0;
   border: none;
 }
 .cadastro {
-  margin: 100px auto;
+  margin: 50px auto;
   width: 60%;
   padding: 0;
   height: auto;
@@ -96,6 +96,7 @@ h2{
   height: 40px;
   width: 80px;
   font-size: 20px;
+
 }
 a {
   display: flex;
@@ -107,7 +108,7 @@ a {
   text-shadow: -2px 1px black;
 }
 .usuarios {
-  width: 80%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,9 +116,12 @@ a {
   border-radius: 10px;
   border: 2px solid #2CE681;
   padding: 2px;
-
+ overflow: auto;
+ max-height: 600px;
 }
-
+.content_tab{
+  margin-bottom: 20px ;
+}
 table {
   width: 100%;
   background: transparent;
@@ -125,36 +129,92 @@ table {
   box-shadow: 0 4px 4px #071b2d;
   border-collapse: collapse;
   text-align: left;
-
   border-radius: 10px;
+ 
 
-}
-tr {
-  border-bottom: 2px solid rgb(89, 109, 147);
 }
 
 th {
-  padding: 10px;
   text-transform: uppercase;
-  color: #000;
+  color: #464545;
 }
 th.tab_titulo {
+  width: 100%;
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
   border-bottom: 1px solid #fff;
 }
 
 td {
   color: #444446;
-  height: 60px;
-}
-td.acoes {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  
+
 }
 
+table{
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+tr{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid rgb(89, 109, 147);
+ 
+
+}
+
+
+.linha{
+
+  display:flex ;
+  flex-direction: row;
+  width: 100%;
+
+}
+.linha.acoes {
+  display: flex;
+  align-items: center;
+ justify-content: space-between;
+  height: 100px;
+
+
+}
+tr.linha.acoes  th{
+ width: 200px;
+ background: transparent;
+}
+tr.linha.acoes  td{
+
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+}
+th{
+  width: 150px;
+display: inline-block;
+
+}
+td{
+  width: auto;
+height: 30px;
+}
+.rodape{
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  background: #f2f5f3;
+  width: 100%;
+  flex-direction: row;
+ align-items: center;
+}
+.rodape a{
+  color:#2CE681;
+  margin-left: 10px;
+}
 @media screen  and (max-width:700px){
   .container{
     font-size: 1rem;
@@ -166,17 +226,25 @@ td.acoes {
     align-items: start;
     
   }
+  
   table{
     font-size: 16px;
+ 
+
   }
-  td{
-    height: 30px;
+
+
+  th{
+    width: 80px;
+  
   }
+ 
   .controles .btn {
+    margin-top: 0;
     background-color: #0392ce;
     height: 30px;
     width: 60px;
-    font-size: 20px;
+    font-size: 16px;
   }
   .formulario{
     width: 80%;

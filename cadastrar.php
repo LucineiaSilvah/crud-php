@@ -37,7 +37,7 @@
     if($conexao->query($sql) === TRUE){
       $_SESSION['status_cadastro'] = true;
       print_r("usuario cadastrado!");
-      header('Location:cadastrar.php');
+      header('Location:painel.php');
     }
     $conexao->close();
   }else{

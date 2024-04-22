@@ -26,38 +26,66 @@ include('valida_acesso.php');
       ?>
       <div class="usuarios">
         <table  class="tabela">
-          <thead>
+          <thead class='table_h'>
             
             <tr>
               <th colspan='10' class="tab_titulo">usuarios</th>
             </tr>
-            <tr>
-             
-              <th>id</th>
-              <th>nome</th>
-              <th>email</th>
-              <th>senha</th>
-              <th>nascimento</th>
-              <th>cidade</th>
-              <th>estado</th>
-              <th>cep</th>
-              <th>açoes</th>
-            </tr>
+
           </thead>
-          <tbody>
+          <tbody class='content'>
             <?php
             while($user_data = mysqli_fetch_assoc($resultado)){
-              echo "<tr>";
-              echo "<td>" . $user_data['id'] ."</td>"; 
-              echo "<td>" . $user_data['nome'] ."</td>"; 
-              echo "<td>" . $user_data['email'] ."</td>"; 
-              echo "<td>" . $user_data['senha'] ."</td>"; 
-              echo "<td>" . $user_data['data_nascimento'] ."</td>"; 
-              echo "<td>" . $user_data['cidade'] ."</td>"; 
-              echo "<td>" . $user_data['estado'] ."</td>"; 
-              echo "<td>" . $user_data['cep'] ."</td>"; 
-              echo "<td class='acoes'>" ."<a href='editar.php?id=$user_data[id]'><i class='fas fa-edit' style='color: #3377B4;'  ></i></a>"."<a href='delete.php?id=$user_data[id]'><i class='fa-solid fa-trash-can' style='color: red;' ></i></a>" ."</td>"; 
-              echo "</tr>";
+    
+            
+              echo" <tr class='content_tab'>";
+
+              echo  "<tr class='linha'>";
+              echo"<th>id</th>";
+              echo "<td data-title ='id'>" . $user_data['id'].  "</td>";
+              echo  "</tr>";
+
+              echo  "<tr class='linha'>";
+              echo"<th>nome</th>";
+              echo "<td data-title ='nome'>" . $user_data['nome'].  "</td>";
+              echo  "</tr>";
+
+              echo  "<tr class='linha'>";
+              echo"<th>email</th>";
+              echo "<td data-title ='email'>" . $user_data['email'].  "</td>";
+              echo  "</tr>";
+
+              echo  "<tr class='linha'>";
+              echo"<th>senha</th>";
+              echo "<td data-title ='senha'>" . $user_data['senha'].  "</td>";
+              echo  "</tr>";
+
+              echo  "<tr class='linha'>";
+              echo"<th>nasc</th>";
+              echo "<td data-title ='nasc'>" . $user_data['data_nascimento'].  "</td>";
+              echo  "</tr>";
+              
+              echo  "<tr class='linha'>";
+              echo"<th>cidade</th>";
+              echo "<td data-title ='cidade'>" . $user_data['cidade'].  "</td>";
+              echo  "</tr>";
+              echo  "<tr class='linha'>";
+              echo"<th>estado</th>";
+              echo "<td data-title ='estado'>" . $user_data['estado'].  "</td>";
+              echo  "</tr>";
+
+              echo  "<tr class='linha'>";
+              echo"<th>cep</th>";
+              echo "<td data-title ='cep'>" . $user_data['cep'].  "</td>";
+              echo  "</tr>";
+          
+              echo  "<tr class='linha acoes'>";
+              echo"<th>acoes</th>";
+              echo "<td data-title ='acoes' class='acoes'>"."<a href='editar.php?id=$user_data[id]'><i class='fas fa-edit' style='color: #3377B4;'  ></i></a>"."<a href='delete.php?id=$user_data[id]'><i class='fa-solid fa-trash-can' style='color: red;' ></i></a>" .  "</td>";
+              echo  "</tr>";
+
+              echo  "</tr>";
+           
             }
             
             ?> 
@@ -69,7 +97,9 @@ include('valida_acesso.php');
         <a class="btn" href="logout.php">Sair</a>
       </div>
     </main>
-
+    <footer  class="rodape">
+      <p>Desenvolvido por : </p><a target="_blank" href="https://www.linkedin.com/in/lucineia-r-silva-frontend/"> Lucineia Silva ^.^ 2024</a>
+      </footer>
   </div>
 </body>
 
